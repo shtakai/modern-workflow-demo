@@ -1,5 +1,7 @@
 # modern-workflow-demo
 
+[![Join the chat at https://gitter.im/remojansen/modern-workflow-demo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/remojansen/modern-workflow-demo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://secure.travis-ci.org/remojansen/modern-workflow-demo.png?branch=master)](https://travis-ci.org/remojansen/modern-workflow-demo) [![Dependencies](https://david-dm.org/remojansen/modern-workflow-demo.png)](https://david-dm.org/remojansen/modern-workflow-demo#info=dependencies)
 
 A TypeScript + Sass + Browserify + Gulp + Karma + BroserSync demo repository
