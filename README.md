@@ -1,36 +1,46 @@
 # modern-workflow-demo
 
 [![Join the chat at https://gitter.im/remojansen/modern-workflow-demo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/remojansen/modern-workflow-demo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 [![Build Status](https://secure.travis-ci.org/remojansen/modern-workflow-demo.png?branch=master)](https://travis-ci.org/remojansen/modern-workflow-demo) [![Dependencies](https://david-dm.org/remojansen/modern-workflow-demo.png)](https://david-dm.org/remojansen/modern-workflow-demo#info=dependencies)
 
 A TypeScript + Sass + Browserify + Gulp + Karma + BroserSync demo repository
 
-# Tasks
+## Workflow
 
-Reload ``npm``, ``bower`` and ``tsd`` dependencies with one command:
+1. **lint**: Lints JSON under ``./data``,  TypeScript under ``./source/ts/`` ``./test``and Sass under ``./source/scss/``.
 
-    gulp install
+        gulp lint
 
-Build your app's TypeScript and Sass code:
+2. **build**: Compiles Sass and TypeScript files from ``./source`` to ``./temp``.
 
-    gulp build
+        gulp build
 
-Bundle and uglify (sorcemaps included) your app's ``.js`` (powered by Browserify) and ``.css`` files:
+3. **bundle**: Bundle files from ``./temp`` to ``./dist`` powered by Browserify.
 
-    gulp optimize
+        gulp bundle
 
-Test runner powered by Karma, Mocha, Chai y Sinon:
+4. **test**: Run Mocha + Chai + Sinon unit test powered by Karma.
 
-    gulp test
+        gulp test
 
-Static server and browser reload on file changes (``.html``, ``.css`` and ``.js``) powered by browser-sync:
+5. **serve**: Host app in static server and  refresh browser on changes powered by BrowserSync.
 
-    gulp sync
+        gulp serve
 
-Default Task:
+The default task will run  
 
-    gulp.task('default', ['build', 'optimize', 'test', 'sync', 'clean']);
+    gulp.task('default', ['lint', 'build', 'bundle','test']);  
+
+There are two additional tasks:
+
+1. **install**: Re-installs ``bower_components``, ``node_modules`` and ``typings``.
+
+        gulp install
+
+2. **clean**: Deletes the ``./temp`` and ``./dist`` directories.
+
+        gulp clean
+
 
 ## License
 
