@@ -19,6 +19,6 @@ module.exports = function (config) {
         colors: true,
         autoWatch: false,
         singleRun: false,
-        logLevel: config.LOG_DEBUG
+        logLevel: config.LOG_INFO
     });
 };

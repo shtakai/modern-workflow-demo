@@ -25,9 +25,15 @@ var tsProject = ts.createProject({
     declarationFiles : false
 });
 
-gulp.task('install', function() {
+gulp.task('bower', function(cb) {
   run('bower install').exec();
+});
+
+gulp.task('npm', function(cb) {
   run('npm install').exec();
+});
+
+gulp.task('tsd', function() {
   run('tsd reinstall -so').exec();
 });
 
@@ -161,8 +167,16 @@ gulp.task('copy:npm', function (cb) {
              .pipe(gulp.dest('./dist/node_modules/'));
 });
 
+gulp.task('install', function(cb) {
+  runSequence(['tsd', 'bower', 'npm'], cb);
+});
+
+gulp.task('install:travis', function(cb) {
+  runSequence(['tsd', 'bower'], cb);
+});
+
 gulp.task('lint', function(cb) {
-  runSequence(['ts-lint', 'scss-lint', 'lint-json'], cb);
+  runSequence(['install:travis', 'ts-lint', 'scss-lint', 'lint-json'], cb);
 });
 
 gulp.task('build', function(cb) {
