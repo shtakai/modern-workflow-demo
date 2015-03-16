@@ -1,31 +1,36 @@
 ///<reference path="./references.d.ts" />
 
+import Handlebars   = require('handlebars');
+import Promise      = require("bluebird");
+
 class Model {
 
   private _modelUrl : string;
-  private _formatter : (response : Object) => Object;
+  private _formatter : Function;
 
-  constructor(moduleUrl : string, formatter : (response : Object) => Object) {
+  constructor(moduleUrl : string, formatter : Function) {
     this._modelUrl = moduleUrl;
     this._formatter = formatter;
   }
-  private genericAjaxCall(method : string, args : Object, cb : (response : Object) => void){
-    $.ajax({
-      url : this._modelUrl,
-      data : args,
-      success : (response : Object) => {
-        if(typeof this._formatter === "function"){
-          response = this._formatter(response);
+  private genericAjaxCallAsync(method : string, args : Object) : Promise<{}>{
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url : this._modelUrl,
+        data : args,
+        success : (response) => {
+          if(typeof this._formatter === "function"){
+            response = this._formatter(response);
+          }
+          resolve(response);
+        },
+        error : function(error) {
+          reject(error);
         }
-        cb(response);
-      },
-      error : function(error) {
-        console.log(error);
-      }
+      });
     });
   }
-  public get(args : Object, cb : (response : Object) => void) {
-    this.genericAjaxCall("GET", args, cb);
+  public getAsync(args : Object) : Promise<{}> {
+      return this.genericAjaxCallAsync("GET", args);
   }
 }
 

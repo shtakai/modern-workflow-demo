@@ -2,6 +2,8 @@
 
 [![Join the chat at https://gitter.im/remojansen/modern-workflow-demo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/remojansen/modern-workflow-demo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://secure.travis-ci.org/remojansen/modern-workflow-demo.png?branch=master)](https://travis-ci.org/remojansen/modern-workflow-demo) [![Dependencies](https://david-dm.org/remojansen/modern-workflow-demo.png)](https://david-dm.org/remojansen/modern-workflow-demo#info=dependencies)
+[![img](https://david-dm.org/remojansen/modern-workflow-demo/dev-status.png)](https://david-dm.org/remojansen/modern-workflow-demo/#info=devDependencies)
+[![img](https://david-dm.org/remojansen/modern-workflow-demo/peer-status.png)](https://david-dm.org/remojansen/modern-workflow-demo/#info=peerDependenciess)
 
 A TypeScript + Sass + Browserify + Gulp + Karma + BroserSync demo repository
 
@@ -27,9 +29,7 @@ A TypeScript + Sass + Browserify + Gulp + Karma + BroserSync demo repository
 
         gulp serve
 
-The default task will run  
-
-    gulp.task('default', ['lint', 'build', 'bundle','test']);  
+The default task runs the **lint**, **build**, **bundle** and **test** tasks.
 
 There are two additional tasks:
 

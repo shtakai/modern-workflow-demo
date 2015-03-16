@@ -1,12 +1,19 @@
 ///<reference path="./references.test.d.ts" />
 
 import chai = require('chai');
+import View = require('../source/ts/view');
+
 var expect = chai.expect;
 
-describe('User Model Unit Tests:', () => {
+describe('Base View Unit Tests:', () => {
 
-    describe('2 + 4', () => {
-        it('should be 6', (done) => {
+    before(function(){
+      
+    });
+
+    describe('Template', () => {
+
+        it('should load by url', (done) => {
             expect(2+4).to.equals(6);
             done();
         });
