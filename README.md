@@ -5,7 +5,7 @@
 [![img](https://david-dm.org/remojansen/modern-workflow-demo/dev-status.png)](https://david-dm.org/remojansen/modern-workflow-demo/#info=devDependencies)
 [![img](https://david-dm.org/remojansen/modern-workflow-demo/peer-status.png)](https://david-dm.org/remojansen/modern-workflow-demo/#info=peerDependenciess)
 
-A TypeScript + Sass + Browserify + Gulp + Karma + BroserSync demo repository
+You can use this project to learn how to use Gulp with TypeScript + Sass + Browserify + Karma + BroserSync.
 
 ## Workflow
 

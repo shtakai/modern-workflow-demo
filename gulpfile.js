@@ -40,7 +40,7 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('ts-lint', function() {
-  return gulp.src(['./source/ts/**/**.ts', './source/test/**/**.ts'])
+  return gulp.src(['./source/ts/**/**.ts', './source/test/**/**.test.ts'])
              .pipe(tslint())
              .pipe(tslint.report('verbose'));
 });
