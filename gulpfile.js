@@ -17,6 +17,12 @@ var browserify  = require('browserify'),
     karma       = require("gulp-karma"),
     runSequence = require('run-sequence');
 
+// transform regular node stream to gulp (buffered vinyl) stream
+var browserified = transform(function(filename) {
+    var b = browserify({ entries: filename, debug: true });
+    return b.bundle();
+});
+
 var tsProject = ts.createProject({
     removeComments : true,
     noImplicitAny : true,
@@ -83,12 +89,6 @@ gulp.task('bundle-css', function() {
 });
 
 gulp.task('bundle-js', function () {
-  // transform regular node stream to gulp (buffered vinyl) stream
-  var browserified = transform(function(filename) {
-    var b = browserify({ entries: filename, debug: true });
-    return b.bundle();
-  });
-
   return gulp.src('./temp/source/js/main.js')
              .pipe(browserified)
              .pipe(sourcemaps.init({ loadMaps: true }))
@@ -98,12 +98,6 @@ gulp.task('bundle-js', function () {
 });
 
 gulp.task('bundle-test', function () {
-  // transform regular node stream to gulp (buffered vinyl) stream
-  var browserified = transform(function(filename) {
-    var b = browserify({ entries: filename, debug: true });
-    return b.bundle();
-  });
-
   return gulp.src('./temp/test/**/**.test.js')
              .pipe(browserified)
              .pipe(gulp.dest('./dist/test/'));
