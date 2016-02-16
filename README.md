@@ -1,3 +1,5 @@
+> **Important notice** I don't have time to look after this repo anymore but I have created an updated version. The new repo is available at https://github.com/remojansen/ts-vscode-boilerplate.
+
 # modern-workflow-demo
 
 [![Join the chat at https://gitter.im/remojansen/modern-workflow-demo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/remojansen/modern-workflow-demo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
