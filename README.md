@@ -5,7 +5,7 @@
 [![Join the chat at https://gitter.im/remojansen/modern-workflow-demo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/remojansen/modern-workflow-demo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://secure.travis-ci.org/remojansen/modern-workflow-demo.png?branch=master)](https://travis-ci.org/remojansen/modern-workflow-demo) [![Dependencies](https://david-dm.org/remojansen/modern-workflow-demo.png)](https://david-dm.org/remojansen/modern-workflow-demo#info=dependencies)
 [![img](https://david-dm.org/remojansen/modern-workflow-demo/dev-status.png)](https://david-dm.org/remojansen/modern-workflow-demo/#info=devDependencies)
-[![img](https://david-dm.org/remojansen/modern-workflow-demo/peer-status.png)](https://david-dm.org/remojansen/modern-workflow-demo/#info=peerDependenciess)
+[![img](https://david-dm.org/remojansen/modern-workflow-demo/peer-status.png)](https://david-dm.org/remojansen/modern-workflow-demo/#info=peerDependenciess) [![GuardRails badge](https://badges.production.guardrails.io/shtakai/modern-workflow-demo.svg)](https://www.guardrails.io)
 
 You can use this project to learn how to use Gulp with TypeScript + Sass + Browserify + Karma + BroserSync.
 
